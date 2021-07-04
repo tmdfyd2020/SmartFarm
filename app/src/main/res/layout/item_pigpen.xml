@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/item_exoplayer"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_margin="12dp"
+            app:use_controller="false"
+            app:resize_mode="fill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_pigpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# PIGPEN_NUMBER"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:paddingLeft="2dp"
+                android:textColor="#2196F3" />
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# ABACTION"
+                android:textSize="15dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="2dp"
+                android:textColor="#707273" />
+
+            <TextView
+                android:id="@+id/item_abaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# TIME"
+                android:textSize="15dp"
+                android:paddingTop="15dp"
+                android:paddingLeft="2dp"
+                android:textColor="#F1588B" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

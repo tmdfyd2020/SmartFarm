@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Full.FullScreen">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/fullscreen_exoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_margin="3dp"
+        android:layout_below="@+id/fullscreen_videoName"
+        app:controller_layout_id="@layout/exoplayer_custom_controls"
+        app:resize_mode="fill"
+        tools:ignore="NotSibling" >
+
+        <TextView
+            android:id="@+id/fullscreen_videoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CC000000"
+            android:text="name"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:visibility="visible"/>
+
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fullscreen_exoplayer" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fullscreen_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>
